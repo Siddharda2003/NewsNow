@@ -13,7 +13,7 @@ const App = () => {
   const pageSize = 9;
   const apiKey = process.env.REACT_APP_NEWS_API;
   const [progress, setProgress] = useState(0);
-
+  console.log(process.env.REACT_APP_NEWS_API)
   return (
     <div>
       <Router>
