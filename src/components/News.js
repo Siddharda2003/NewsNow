@@ -54,6 +54,7 @@ const News = (props) => {
 
   const fetchMoreData = async () => {
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${process.env.REACT_APP_NEWS_API}&page=${page + 1}&pageSize=${props.pageSize}`;
+    console.log(url)
     let parsedData = await fetchData(url);
     if (parsedData) {
       setarticles(articles.concat(parsedData.articles))
